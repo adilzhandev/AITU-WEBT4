@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Assignment 4: HTML forms, Bootstrap and form validation.">
+  <title>Basic HTML forms | Assignment 4</title>
+  <link rel="stylesheet" href="style.css?v=5">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="page-width header-inner">
+      <a class="project-name" href="index.html">
+        <span class="project-caption">Web technologies / Assignment 4</span>
+        Forms &amp; validation
+      </a>
+      <nav class="site-nav" aria-label="Assignment sections">
+        <div class="nav-links">
+          <a class="nav-link active" href="index.html" aria-current="page">1. HTML Forms</a>
+        </div>
+      </nav>
+      <div class="student-info">
+        <strong>Adilzhan Kuandykov</strong>
+        <span>SE-2526</span>
+      </div>
+    </div>
+  </header>
+  <main class="page-width">
+    <div class="page-heading">
+      <div>
+        <p class="section-number">PART 01</p>
+        <h1>Basic HTML forms</h1>
+      </div>
+    </div>
+    <div class="task-grid">
+      <section class="task-card" aria-labelledby="basic-title">
+        <div class="task-intro">
+          <p class="task-number">Task 00</p>
+          <h2 class="task-title" id="basic-title">Simple contact form</h2>
+        </div>
+        <form id="basic-form" aria-labelledby="basic-title" class="basic-form">
+          <div class="field">
+            <label class="form-label" for="basic-name">Name</label>
+            <input type="text" id="basic-name" name="name" class="basic-control" placeholder="Your name" autocomplete="name">
+          </div>
+          <div class="field">
+            <label class="form-label" for="basic-email">Email</label>
+            <input type="email" id="basic-email" name="email" class="basic-control" placeholder="you@example.com" autocomplete="email">
+          </div>
+          <div class="field">
+            <label class="form-label" for="basic-message">Message</label>
+            <textarea id="basic-message" name="message" class="basic-control" placeholder="Write your message here" rows="4"></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="button" type="submit">Submit</button>
+          </div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
