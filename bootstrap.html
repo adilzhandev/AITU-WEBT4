@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Assignment 4: HTML forms, Bootstrap and form validation.">
+  <title>Bootstrap forms | Assignment 4</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css?v=5">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="page-width header-inner">
+      <a class="project-name" href="index.html">
+        <span class="project-caption">Web technologies / Assignment 4</span>
+        Forms &amp; validation
+      </a>
+      <nav class="site-nav" aria-label="Assignment sections">
+        <div class="nav-links">
+          <a class="nav-link" href="index.html">1. HTML Forms</a>
+          <a class="nav-link active" href="bootstrap.html" aria-current="page">2. Bootstrap</a>
+        </div>
+      </nav>
+      <div class="student-info">
+        <strong>Adilzhan Kuandykov</strong>
+        <span>SE-2526</span>
+      </div>
+    </div>
+  </header>
+  <main class="page-width">
+    <div class="page-heading">
+      <div>
+        <p class="section-number">PART 02</p>
+        <h1>Bootstrap forms</h1>
+      </div>
+    </div>
+    <div class="task-grid">
+      <section class="task-card" aria-labelledby="bootstrap-title">
+        <div class="task-intro">
+          <p class="task-number">Task 02</p>
+          <h2 class="task-title" id="bootstrap-title">Bootstrap form styling</h2>
+        </div>
+        <form id="bootstrap-form" aria-labelledby="bootstrap-title" class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label" for="bootstrap-name">Name</label>
+            <input type="text" id="bootstrap-name" name="name" class="form-control" placeholder="Your name" required minlength="2" maxlength="50" pattern=".*\S.*" autocomplete="name">
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="bootstrap-email">Email</label>
+            <input type="email" id="bootstrap-email" name="email" class="form-control" placeholder="you@example.com" required maxlength="100" autocomplete="email" aria-describedby="bootstrap-email-help">
+            <div class="form-text" id="bootstrap-email-help">For example, alex@example.com.</div>
+          </div>
+          <div class="col-12">
+            <label class="form-label" for="bootstrap-message">Message</label>
+            <textarea id="bootstrap-message" name="message" class="form-control" placeholder="Write your message here" required minlength="10" maxlength="500" aria-describedby="bootstrap-message-help" rows="4"></textarea>
+            <div class="form-text" id="bootstrap-message-help">Write 10–500 characters.</div>
+          </div>
+          <div class="col-12 form-actions">
+            <button class="button" type="submit">Submit</button>
+          </div>
+          <p class="col-12 form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
