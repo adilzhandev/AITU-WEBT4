@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Assignment 4: HTML forms, Bootstrap and form validation.">
+  <title>Registration form | Assignment 4</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css?v=5">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="page-width header-inner">
+      <a class="project-name" href="index.html">
+        <span class="project-caption">Web technologies / Assignment 4</span>
+        Forms &amp; validation
+      </a>
+      <nav class="site-nav" aria-label="Assignment sections">
+        <div class="nav-links">
+          <a class="nav-link" href="index.html">1. HTML Forms</a>
+          <a class="nav-link" href="bootstrap.html">2. Bootstrap</a>
+          <a class="nav-link active" href="registration.html" aria-current="page">3. Registration</a>
+        </div>
+      </nav>
+      <div class="student-info">
+        <strong>Adilzhan Kuandykov</strong>
+        <span>SE-2526</span>
+      </div>
+    </div>
+  </header>
+  <main class="page-width registration-page">
+    <div class="task-grid">
+      <section class="task-card registration-card" aria-labelledby="registration-title">
+        <div class="task-intro">
+          <p class="task-number">Part 03 / Task 04</p>
+          <h1 id="registration-title">Registration</h1>
+        </div>
+        <form id="registration-form" aria-labelledby="registration-title" novalidate data-feedback>
+          <fieldset class="form-section">
+            <legend class="form-section-title">Personal details</legend>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="first-name" class="form-label">First name</label>
+                <input type="text" id="first-name" name="first-name" class="form-control" placeholder="Your first name" autocomplete="given-name" required minlength="2" maxlength="50" pattern=".*\S.*" aria-describedby="first-name-error first-name-valid">
+                <div id="first-name-error" class="invalid-feedback">Enter a first name with 2–50 characters.</div>
+                <div id="first-name-valid" class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="col-md-6">
+                <label for="last-name" class="form-label">Last name</label>
+                <input type="text" id="last-name" name="last-name" class="form-control" placeholder="Your last name" autocomplete="family-name" required minlength="2" maxlength="50" pattern=".*\S.*" aria-describedby="last-name-error last-name-valid">
+                <div id="last-name-error" class="invalid-feedback">Enter a last name with 2–50 characters.</div>
+                <div id="last-name-valid" class="valid-feedback">Looks good!</div>
+              </div>
+              <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="you@example.com" autocomplete="email" required maxlength="100" aria-describedby="email-error email-valid">
+                <div id="email-error" class="invalid-feedback">Enter a valid email address.</div>
+                <div id="email-valid" class="valid-feedback">Looks good!</div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-section">
+            <legend class="form-section-title">Account security</legend>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="At least 8 characters" autocomplete="new-password" required minlength="8" maxlength="64" aria-describedby="password-error password-valid password-help">
+                <div id="password-error" class="invalid-feedback">Use 8–64 characters.</div>
+                <div id="password-valid" class="valid-feedback">Looks good!</div>
+                <div id="password-help" class="form-text">Use 8–64 characters.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="confirm-password" class="form-label">Confirm password</label>
+                <input type="password" id="confirm-password" name="confirm-password" class="form-control" placeholder="Enter your password again" autocomplete="new-password" required minlength="8" maxlength="64" aria-describedby="confirm-password-error confirm-password-valid">
+                <div id="confirm-password-error" class="invalid-feedback">Enter the same password again.</div>
+                <div id="confirm-password-valid" class="valid-feedback">Looks good!</div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-section">
+            <legend class="form-section-title">Preferences</legend>
+            <div class="row g-3">
+              <fieldset class="col-md-6">
+                <legend class="form-label">Gender</legend>
+                <div class="choices">
+                  <div class="form-check">
+                    <input type="radio" id="male" name="gender" value="male" class="form-check-input" required aria-describedby="gender-error gender-valid">
+                    <label for="male" class="form-check-label">Male</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" id="female" name="gender" value="female" class="form-check-input" required aria-describedby="gender-error gender-valid">
+                    <label for="female" class="form-check-label">Female</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="radio" id="other" name="gender" value="other" class="form-check-input" required aria-describedby="gender-error gender-valid">
+                    <label for="other" class="form-check-label">Other</label>
+                  </div>
+                </div>
+                <div id="gender-error" class="invalid-feedback">Please select a gender.</div>
+                <div id="gender-valid" class="valid-feedback">Looks good!</div>
+              </fieldset>
+              <div class="col-md-6">
+                <label for="country" class="form-label">Country</label>
+                <select id="country" name="country" class="form-select" required aria-describedby="country-error country-valid">
+                  <option value="">Choose your country</option>
+                  <option value="kz">Kazakhstan</option>
+                  <option value="kg">Kyrgyzstan</option>
+                  <option value="uz">Uzbekistan</option>
+                  <option value="tr">Türkiye</option>
+                  <option value="uk">United Kingdom</option>
+                  <option value="us">United States</option>
+                  <option value="other">Other</option>
+                </select>
+                <div id="country-error" class="invalid-feedback">Please choose a country.</div>
+                <div id="country-valid" class="valid-feedback">Looks good!</div>
+              </div>
+              <fieldset class="col-12">
+                <legend class="form-label">Hobbies <span class="optional">(optional)</span></legend>
+                <div class="choices">
+                  <div class="form-check">
+                    <input type="checkbox" id="reading" name="hobbies" value="reading" class="form-check-input">
+                    <label for="reading" class="form-check-label">Reading</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="sports" name="hobbies" value="sports" class="form-check-input">
+                    <label for="sports" class="form-check-label">Sports</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="music" name="hobbies" value="music" class="form-check-input">
+                    <label for="music" class="form-check-label">Music</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="travel" name="hobbies" value="travel" class="form-check-input">
+                    <label for="travel" class="form-check-label">Travel</label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </fieldset>
+          <div class="form-actions">
+            <button type="submit" class="button">Submit</button>
+            <button type="reset" class="button button-secondary">Reset</button>
+          </div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
