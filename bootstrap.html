@@ -62,6 +62,38 @@
           <p class="col-12 form-status" role="status" aria-live="polite"></p>
         </form>
       </section>
+      <section class="task-card" aria-labelledby="feedback-title">
+        <div class="task-intro">
+          <p class="task-number">Task 03</p>
+          <h2 class="task-title" id="feedback-title">Validation feedback</h2>
+        </div>
+        <form id="feedback-form" aria-labelledby="feedback-title" class="row g-3" novalidate data-feedback>
+          <div class="col-md-6">
+            <label class="form-label" for="feedback-name">Name</label>
+            <input type="text" id="feedback-name" name="name" class="form-control" placeholder="Your name" required minlength="2" maxlength="50" pattern=".*\S.*" autocomplete="name" aria-describedby="feedback-name-error feedback-name-valid">
+            <div class="invalid-feedback" id="feedback-name-error">Enter a name with 2–50 characters.</div>
+            <div class="valid-feedback" id="feedback-name-valid">Looks good!</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="feedback-email">Email</label>
+            <input type="email" id="feedback-email" name="email" class="form-control" placeholder="you@example.com" required maxlength="100" autocomplete="email" aria-describedby="feedback-email-help feedback-email-error feedback-email-valid">
+            <div class="invalid-feedback" id="feedback-email-error">Enter a valid email address.</div>
+            <div class="valid-feedback" id="feedback-email-valid">Looks good!</div>
+            <div class="form-text" id="feedback-email-help">For example, alex@example.com.</div>
+          </div>
+          <div class="col-12">
+            <label class="form-label" for="feedback-message">Message</label>
+            <textarea id="feedback-message" name="message" class="form-control" placeholder="Write your message here" required minlength="10" maxlength="500" aria-describedby="feedback-message-help feedback-message-error feedback-message-valid" rows="4"></textarea>
+            <div class="invalid-feedback" id="feedback-message-error">Write a message with 10–500 characters.</div>
+            <div class="valid-feedback" id="feedback-message-valid">Looks good!</div>
+            <div class="form-text" id="feedback-message-help">Write 10–500 characters.</div>
+          </div>
+          <div class="col-12 form-actions">
+            <button class="button" type="submit">Submit</button>
+          </div>
+          <p class="col-12 form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
     </div>
   </main>
 </body>
