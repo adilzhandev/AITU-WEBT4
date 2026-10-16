@@ -58,6 +58,30 @@
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </section>
+      <section class="task-card" aria-labelledby="html-title">
+        <div class="task-intro">
+          <p class="task-number">Task 01</p>
+          <h2 class="task-title" id="html-title">HTML5 validation</h2>
+        </div>
+        <form id="html-form" aria-labelledby="html-title" class="basic-form">
+          <div class="field">
+            <label class="form-label" for="html-name">Name</label>
+            <input type="text" id="html-name" name="name" class="basic-control" placeholder="Your name" required minlength="2" maxlength="50" pattern=".*\S.*" autocomplete="name">
+          </div>
+          <div class="field">
+            <label class="form-label" for="html-email">Email</label>
+            <input type="email" id="html-email" name="email" class="basic-control" placeholder="you@example.com" required maxlength="100" autocomplete="email">
+          </div>
+          <div class="field">
+            <label class="form-label" for="html-message">Message</label>
+            <textarea id="html-message" name="message" class="basic-control" placeholder="Write your message here" required minlength="10" maxlength="500" rows="4"></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="button" type="submit">Submit</button>
+          </div>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
     </div>
   </main>
 </body>
