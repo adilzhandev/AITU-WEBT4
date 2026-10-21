@@ -44,8 +44,8 @@ Tasks 1 and 2 use HTML attributes to trigger the browser's built-in validation. 
 
 ## Deployment
 
-- Repository: [AITU-WEBT4](https://github.com/adilzhandev/AITU-WEBT4)
-- Live website: [GitHub Pages](https://adilzhandev.github.io/AITU-WEBT4/)
+- Repository: [AITU-WEBT4](https://github.com/adilzhandev/AITU-WT-A4)
+- Live website: [GitHub Pages](https://adilzhandev.github.io/AITU-WT-A4/)
 
 The website is published from the root of the `main` branch using GitHub Pages. Both links are needed for submission. The student must complete the oral defense and live coding tasks in class.
 
